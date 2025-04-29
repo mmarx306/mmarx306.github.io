@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Run for Chief - Impact</title>
+    <meta name="author" content="Adtile">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="img/logo.png" alt="logo" class="logo">
+      <nav class="nav-collapse">      
+         <ul>
+          <li class="menu-item"><a href="index.html" data-scroll>home</a></li>
+          <li class="menu-item"><a href="about.html" data-scroll>Chief's Story</a></li>
+          <li class="menu-item"><a href="race.html" data-scroll>Race</a></li>
+          <li class="menu-item"><a href="impact.html" data-scroll>Our Impact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content1"> 
+        <div class="impact"> 
+           <h2> Our Impact </h2>
+            <p> All proceeds from the Run for Chief race are donated 
+              to Jaden's Fund at Cincinnati Children's Hospital! This fund 
+            provides support for heart transplant patients as well as their
+            families. 
+            </p>
+  
+
+           <div class="bullet">
+            <ul>
+                <li>  An all-inclusive day at Kings Island for patients and their families </li>
+                <li> Christmas gifts for the patients and their siblings</li> 
+               <li> Sundaes on Sundays</li>
+              <li> Lunches for the doctors, nurses, and support staff who provide world-class care  </li>
+            </ul>
+            <p> We are incredibly grateful to everyone who has supported our mission
+            over the past two years to celebrate Jay Chief and to help the children who find 
+            themselves in a similar situation that Chief did.
+            </p>
+           </div>
+          </div>
+
+<!-- The code below was taken from W3 schools with approval from Tessa. I styled them on my own, however. -->
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="img/bluey.png" alt="patient with bluey toys">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="img/baby.png" alt="baby with gifts">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img/gift.png" alt="patient receiving gift">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
+        <div class="donate">
+           <h2> Donations </h2>
+            <p> Donations can be made to Jaden's Fund through Children's Hospital's 
+            website which can be found <a href="https://giving.cincinnatichildrens.org/fundraiser/6083871">here</a>.
+            Jaden's Fund is a part of Children's Hospital's which is a 501(c)(3) organization.
+            All donations are tax-deductible. More information regarding how to claim a donations
+            as a deduction on your taxes can be found on <a href="https://giving.cincinnatichildrens.org/fundraiser/6083871">the website</a>.
+            </p>
+        </div>
+
+        <div class="sponsor">
+          <h2> Other Ways to Help</h2>
+          <p> Races are expensive and while we do our best at limiting
+            our expenses, sponsors help us to ensure that all the money we raise
+            goes to Jaden's Fund. </p>
+          <p> If you are interested in sponsoring the upcoming Run for Chief race,
+            please fill out the form below and we will reach out to you with more information!
+          </p>
+        </div>
+    </div>
+    <div class="form">
+      <h3> Contact Us!</h3>
+      <form method=”post” action=”/”>	
+        <label> Name:
+          <input type= “text” name=”userid” class="username">
+        </label>
+        <label> Email:
+          <input type= “email” name=”email”>
+        </label>
+        <button class="button2" type="submit">Submit</button>  
+      </form>
+    </div>
+    <footer class="footer">
+      <img src="img/logo.png" alt="logo" class="footer-logo">
+      <p> RUNFORCHIEF LLC</p> 
+      <p> 101 Joe Nuxhall Way Cincinnati, OH 45202</p>
+    </footer>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/fixed-responsive-nav.js"></script>
+
+</body>

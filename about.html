@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Run for Chief - Story</title>
+    <meta name="author" content="Adtile">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/logo.png" alt="logo" class="logo">
+      <nav class="nav-collapse">      
+         <ul>
+          <li class="menu-item"><a href="index.html" data-scroll>home</a></li>
+          <li class="menu-item"><a href="about.html" data-scroll>Chief's Story</a></li>
+          <li class="menu-item"><a href="race.html" data-scroll>Race</a></li>
+          <li class="menu-item"><a href="impact.html" data-scroll>Our Impact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content3">
+      <div class="intro3">
+        <h2> Chief's Story </h2>
+        <p class="pbox"> Jay Chief, as he was often called, was bom with a heart defect and underwent multiple heart surgeries by the age of two.
+           At 11, his heart began to fail, and he required a heart transplant. In 2014, as a freshman at Summit, he received his new heart at Cincinnati Children's Hospital
+            and was able to thrive socially and academically in the years following his surgery. He also ran for Summit's cross country and track teams which is an extraordinary 
+            feat given his condition. </p>
+      </div>
+      <div class="intro4">
+          <p> Jay Chief graduated from Summit in 2018 and attended The Ohio State University as a finance major. Jaden interned at JPMorgan Chase Bank in 
+            New York City before the start of his senior year of college where he had the time of his life and made some of his closest friends. Jaden passed away on September 12,
+             2021 at the age of 21 after complications with his new heart. </p>
+      </div>
+    </div>
+
+    <!-- The code below was taken from W3 schools with approval from Tessa. I styled them on my own, however. -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="img/hosp.jpg" alt="Jaden with Friends at the Hospital">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="img/cm.jpg" alt="Cate Marx reflection">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/cc.jpg" alt="Courtney Chamberlin reflection">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/kh.jpg" alt="Kelley Heyd reflection">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/friends.jpg" alt="Friends">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <div class="inspo">
+      <div class="first">
+        <h2> How 'Run for Chief' Came to Be</h2>
+        <p>
+          I felt compelled to start an event to remember Jay Chief 
+          because of the person he was. I cannot express in words the positive impact 
+          that he made on my life and countless others. He never complained about the cards 
+          he was dealt or the pain he was often in. He was courageous, loving, loud, and 
+          unlike anyone I have ever known before. </p>
+      </div>
+      <div class="second">
+        <p>The "Run for Chief" race will continue Jay Chief's legacy while also benefiting those who face similar challenges to the ones he dealt with.
+        The proceeds from the race will be donated to families at the Cincinnati Children's Hospital who have children receiving heart transplants just like Jaden did. Heart 
+        transplants are expensive, with an average cost of $1,670,000 before insurance, and families face additional costs for travel, lodging, and food. Our goal is to alleviate a portion of that financial burden.
+       </p>
+      </div>
+    </div>
+  </body>
+
+  <footer class="footer">
+    <img src="img/logo.png" alt="logo" class="footer-logo">
+    <p> RUNFORCHIEF LLC</p> 
+    <p> 101 Joe Nuxhall Way Cincinnati, OH 45202</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  <script src="js/fastclick.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/fixed-responsive-nav.js"></script>
